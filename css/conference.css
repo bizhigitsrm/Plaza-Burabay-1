@@ -43,3 +43,13 @@
   color: rgba(0,0,0,.70);
   font-size:.92rem;
 }
+
+@media (max-width: 640px){
+  .facts{ gap: var(--space-4); }
+  .fact-card{ padding: var(--space-4); }
+  .fact-row{ flex-direction:column; gap:6px; }
+  .fact-val{ text-align:left; }
+
+  .media-card__img{ height: 220px; }
+  .media-card__cap{ padding:10px 12px; }
+}

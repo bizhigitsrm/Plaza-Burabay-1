@@ -34,7 +34,6 @@
 }
 .map-card__img{
   height: 320px;
-  background-image: url("../assets/map-placeholder.jpg");
   background-size:cover;
   background-position:center;
 }
@@ -42,6 +41,17 @@
   padding: 12px 14px;
   color: rgba(0,0,0,.70);
   font-size: .92rem;
+}
+
+@media (max-width: 640px){
+  .contact-grid{ gap: var(--space-4); }
+  .contact-card{ padding: var(--space-4); }
+  .contact-row{ flex-direction:column; gap:6px; }
+  .contact-actions{ display:grid; }
+  .contact-actions .btn{ width:100%; }
+
+  .map-card__img{ height: 220px; }
+  .map-card__cap{ padding:10px 12px; }
 }
 @media (min-width: 900px){
   .contact-grid{ grid-template-columns: 1fr 1fr; align-items:start; }

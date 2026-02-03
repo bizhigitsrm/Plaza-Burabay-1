@@ -12,7 +12,8 @@
   <!-- Montserrat only -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="./assets/rooms/standard.jpg" fetchpriority="high" />
 
   <link rel="stylesheet" href="./css/base.css" />
   <link rel="stylesheet" href="./css/rooms.css" />
@@ -42,13 +43,13 @@
 
     <div class="header__actions">
       <a class="btn btn--primary btn--sm header__book" href="https://wa.me/message/OLSP5EE7YBBVB1" target="_blank" rel="noopener">
-        <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"></use></svg>
+        <svg class="icon" aria-hidden="true"><use href="./assets/icons/sprite.svg#i-whatsapp"></use></svg>
         <span data-i18n="cta.whatsapp">WhatsApp</span>
       </a>
       <div class="lang" aria-label="Language">
         <button class="lang__btn" type="button" data-lang-toggle aria-expanded="false">
           <span class="lang__code" data-lang-current>RU</span>
-          <svg class="icon icon--sm" aria-hidden="true"><use href="#i-chevron"></use></svg>
+          <svg class="icon icon--sm" aria-hidden="true"><use href="./assets/icons/sprite.svg#i-chevron"></use></svg>
         </button>
         <div class="lang__menu" data-lang-menu aria-hidden="true">
           <button class="lang__item" type="button" data-lang="ru">Русский</button>
@@ -58,7 +59,7 @@
       </div>
 
       <button class="burger" type="button" data-burger aria-label="Menu" aria-expanded="false">
-        <svg class="icon" aria-hidden="true"><use href="#i-menu"></use></svg>
+        <svg class="icon" aria-hidden="true"><use href="./assets/icons/sprite.svg#i-menu"></use></svg>
       </button>
     </div>
   </div>
@@ -71,7 +72,7 @@
     <div class="drawer__top">
       <div class="drawer__title" data-i18n="nav.menu">Меню</div>
       <button class="drawer__close" type="button" data-drawer-close aria-label="Close">
-        <svg class="icon" aria-hidden="true"><use href="#i-close"></use></svg>
+        <svg class="icon" aria-hidden="true"><use href="./assets/icons/sprite.svg#i-close"></use></svg>
       </button>
     </div>
 
@@ -93,22 +94,19 @@
       </div>
     </div>
 
-    <div class="drawer__meta">
-      <div class="meta-line" data-i18n="meta.times">Check-in 14:00 · Check-out 12:00</div>
-      <div class="meta-line" data-i18n="meta.wifiDetail">Wi‑Fi: open · 5 этаж — “Султан Плаза 5”</div>
-    </div>
+  
 
     <div class="drawer__cta">
       <a class="btn btn--primary" href="https://wa.me/message/OLSP5EE7YBBVB1" target="_blank" rel="noopener">
-        <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"></use></svg>
+        <svg class="icon" aria-hidden="true"><use href="./assets/icons/sprite.svg#i-whatsapp"></use></svg>
         <span data-i18n="cta.whatsapp">WhatsApp</span>
       </a>
       <a class="btn btn--ghost" href="tel:+77074614707">
-        <svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg>
+        <svg class="icon" aria-hidden="true"><use href="./assets/icons/sprite.svg#i-phone"></use></svg>
         <span data-i18n="cta.call">Позвонить</span>
       </a>
       <a class="btn btn--ghost" href="mailto:sultanplazaburabay@gmail.com">
-        <svg class="icon" aria-hidden="true"><use href="#i-mail"></use></svg>
+        <svg class="icon" aria-hidden="true"><use href="./assets/icons/sprite.svg#i-mail"></use></svg>
         <span data-i18n="cta.email">Email</span>
       </a>
     </div>
@@ -121,9 +119,9 @@
   <div class="page-hero__media" aria-hidden="true"></div>
   <div class="page-hero__veil" aria-hidden="true"></div>
   <div class="container page-hero__content">
-    <p class="kicker" data-reveal>— SULTAN PLAZA BOROVOE</p>
-    <h1 class="h1" data-reveal data-i18n="rooms.title">Номера</h1>
-    <p class="p p--muted" data-reveal data-i18n="rooms.lead">Переключите питание — цены обновятся.</p>
+    <p class="kicker">— SULTAN PLAZA BOROVOE</p>
+    <h1 class="h1" data-i18n="rooms.title">Номера</h1>
+    <p class="p p--muted" data-i18n="rooms.lead">Переключите питание — цены обновятся.</p>
   </div>
 </section>
 
@@ -143,7 +141,7 @@
     <div class="rooms-grid" style="margin-top: var(--space-6);">
       <!-- 1) Standard -->
       <article class="glass room-card" data-reveal data-breakfast="61 000" data-fullboard="99 000">
-        <div class="room-card__media" style="background-image:url('./assets/rooms/standard.jpg')">
+        <div class="room-card__media" data-bg="./assets/rooms/standard.jpg">
           <!-- Replace with real photo: /assets/rooms/standard.jpg -->
         </div>
         <div class="room-card__body">
@@ -153,7 +151,7 @@
               <p class="p p--muted" style="margin:6px 0 0" data-i18n="rooms.r1.cap">2 взрослых + дети до 6</p>
             </div>
             <span class="badge">
-              <svg class="icon icon--sm" aria-hidden="true"><use href="#i-check"></use></svg>
+              <svg class="icon icon--sm" aria-hidden="true"><use href="./assets/icons/sprite.svg#i-check"></use></svg>
               <span data-i18n="rooms.badge.breakfast">Завтрак включён</span>
             </span>
           </div>
@@ -179,11 +177,11 @@
 
           <div class="room-card__actions">
             <a class="btn btn--primary" href="https://wa.me/message/OLSP5EE7YBBVB1" target="_blank" rel="noopener">
-              <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"></use></svg>
+              <svg class="icon" aria-hidden="true"><use href="./assets/icons/sprite.svg#i-whatsapp"></use></svg>
               <span data-i18n="cta.availability">Уточнить наличие</span>
             </a>
             <a class="btn btn--ghost" href="tel:+77074614707">
-              <svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg>
+              <svg class="icon" aria-hidden="true"><use href="./assets/icons/sprite.svg#i-phone"></use></svg>
               <span data-i18n="cta.call">Позвонить</span>
             </a>
           </div>
@@ -192,7 +190,7 @@
 
       <!-- 2) Deluxe twin -->
       <article class="glass room-card" data-reveal data-breakfast="69 000" data-fullboard="107 000">
-        <div class="room-card__media" style="background-image:url('./assets/rooms/deluxe-twin.jpg')">
+        <div class="room-card__media" data-bg="./assets/rooms/deluxe-twin.jpg">
           <!-- Replace with real photo: /assets/rooms/deluxe-twin.jpg -->
         </div>
         <div class="room-card__body">
@@ -202,7 +200,7 @@
               <p class="p p--muted" style="margin:6px 0 0" data-i18n="rooms.r2.cap">2 взрослых + дети до 6</p>
             </div>
             <span class="badge">
-              <svg class="icon icon--sm" aria-hidden="true"><use href="#i-check"></use></svg>
+              <svg class="icon icon--sm" aria-hidden="true"><use href="./assets/icons/sprite.svg#i-check"></use></svg>
               <span data-i18n="rooms.badge.breakfast">Завтрак включён</span>
             </span>
           </div>
@@ -228,11 +226,11 @@
 
           <div class="room-card__actions">
             <a class="btn btn--primary" href="https://wa.me/message/OLSP5EE7YBBVB1" target="_blank" rel="noopener">
-              <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"></use></svg>
+              <svg class="icon" aria-hidden="true"><use href="./assets/icons/sprite.svg#i-whatsapp"></use></svg>
               <span data-i18n="cta.availability">Уточнить наличие</span>
             </a>
             <a class="btn btn--ghost" href="tel:+77074614707">
-              <svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg>
+              <svg class="icon" aria-hidden="true"><use href="./assets/icons/sprite.svg#i-phone"></use></svg>
               <span data-i18n="cta.call">Позвонить</span>
             </a>
           </div>
@@ -241,7 +239,7 @@
 
       <!-- 3) Family -->
       <article class="glass room-card" data-reveal data-breakfast="90 000" data-fullboard="128 000">
-        <div class="room-card__media" style="background-image:url('./assets/rooms/family.jpg')">
+        <div class="room-card__media" data-bg="./assets/rooms/family.jpg">
           <!-- Replace with real photo: /assets/rooms/family.jpg -->
         </div>
         <div class="room-card__body">
@@ -251,7 +249,7 @@
               <p class="p p--muted" style="margin:6px 0 0" data-i18n="rooms.r3.cap">3 взрослых или 2+1 подросток</p>
             </div>
             <span class="badge">
-              <svg class="icon icon--sm" aria-hidden="true"><use href="#i-check"></use></svg>
+              <svg class="icon icon--sm" aria-hidden="true"><use href="./assets/icons/sprite.svg#i-check"></use></svg>
               <span data-i18n="rooms.badge.breakfast">Завтрак включён</span>
             </span>
           </div>
@@ -276,11 +274,11 @@
 
           <div class="room-card__actions">
             <a class="btn btn--primary" href="https://wa.me/message/OLSP5EE7YBBVB1" target="_blank" rel="noopener">
-              <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"></use></svg>
+              <svg class="icon" aria-hidden="true"><use href="./assets/icons/sprite.svg#i-whatsapp"></use></svg>
               <span data-i18n="cta.availability">Уточнить наличие</span>
             </a>
             <a class="btn btn--ghost" href="tel:+77074614707">
-              <svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg>
+              <svg class="icon" aria-hidden="true"><use href="./assets/icons/sprite.svg#i-phone"></use></svg>
               <span data-i18n="cta.call">Позвонить</span>
             </a>
           </div>
@@ -289,7 +287,7 @@
 
       <!-- 4) Suite -->
       <article class="glass room-card" data-reveal data-breakfast="130 000" data-fullboard="168 000">
-        <div class="room-card__media" style="background-image:url('./assets/rooms/suite.jpg')">
+        <div class="room-card__media" data-bg="./assets/rooms/suite.jpg">
           <!-- Replace with real photo: /assets/rooms/suite.jpg -->
         </div>
         <div class="room-card__body">
@@ -299,7 +297,7 @@
               <p class="p p--muted" style="margin:6px 0 0" data-i18n="rooms.r4.cap">Спальня + гостиная</p>
             </div>
             <span class="badge">
-              <svg class="icon icon--sm" aria-hidden="true"><use href="#i-check"></use></svg>
+              <svg class="icon icon--sm" aria-hidden="true"><use href="./assets/icons/sprite.svg#i-check"></use></svg>
               <span data-i18n="rooms.badge.breakfast">Завтрак включён</span>
             </span>
           </div>
@@ -325,11 +323,11 @@
 
           <div class="room-card__actions">
             <a class="btn btn--primary" href="https://wa.me/message/OLSP5EE7YBBVB1" target="_blank" rel="noopener">
-              <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"></use></svg>
+              <svg class="icon" aria-hidden="true"><use href="./assets/icons/sprite.svg#i-whatsapp"></use></svg>
               <span data-i18n="cta.availability">Уточнить наличие</span>
             </a>
             <a class="btn btn--ghost" href="tel:+77074614707">
-              <svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg>
+              <svg class="icon" aria-hidden="true"><use href="./assets/icons/sprite.svg#i-phone"></use></svg>
               <span data-i18n="cta.call">Позвонить</span>
             </a>
           </div>
@@ -338,7 +336,7 @@
 
       <!-- 5) Cottage (on request) -->
       <article class="glass room-card room-card--request" data-reveal>
-        <div class="room-card__media" style="background-image:url('./assets/rooms/cottage.jpg')">
+        <div class="room-card__media" data-bg="./assets/rooms/cottage.jpg">
           <!-- Replace with real photo: /assets/rooms/cottage.jpg -->
         </div>
         <div class="room-card__body">
@@ -348,7 +346,7 @@
               <p class="p p--muted" style="margin:6px 0 0" data-i18n="rooms.r5.lead">Данные — по запросу.</p>
             </div>
             <span class="badge badge--soft">
-              <svg class="icon icon--sm" aria-hidden="true"><use href="#i-check"></use></svg>
+              <svg class="icon icon--sm" aria-hidden="true"><use href="./assets/icons/sprite.svg#i-check"></use></svg>
               <span data-i18n="rooms.onRequest">По запросу</span>
             </span>
           </div>
@@ -359,11 +357,11 @@
 
           <div class="room-card__actions">
             <a class="btn btn--primary" href="https://wa.me/message/OLSP5EE7YBBVB1" target="_blank" rel="noopener">
-              <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"></use></svg>
+              <svg class="icon" aria-hidden="true"><use href="./assets/icons/sprite.svg#i-whatsapp"></use></svg>
               <span data-i18n="cta.ask">Уточнить</span>
             </a>
             <a class="btn btn--ghost" href="tel:+77074614707">
-              <svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg>
+              <svg class="icon" aria-hidden="true"><use href="./assets/icons/sprite.svg#i-phone"></use></svg>
               <span data-i18n="cta.call">Позвонить</span>
             </a>
           </div>
@@ -377,7 +375,7 @@
         <div class="info-note__text" data-i18n="rooms.extraBedText">До 16 лет — 15 000 тг/ночь.</div>
       </div>
       <a class="btn btn--primary" href="https://wa.me/message/OLSP5EE7YBBVB1" target="_blank" rel="noopener">
-        <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"></use></svg>
+        <svg class="icon" aria-hidden="true"><use href="./assets/icons/sprite.svg#i-whatsapp"></use></svg>
         <span data-i18n="cta.whatsapp">WhatsApp</span>
       </a>
     </div>
@@ -397,30 +395,30 @@
     <div class="footer__links">
       <div class="footer__col">
         <div class="footer__head" data-i18n="footer.nav">Навигация</div>
-        <a class="footer__link" href="./index.html"><svg class="icon icon--sm" aria-hidden="true"><use href="#i-arrow"></use></svg><span data-i18n="nav.hotel">Hotel</span></a>
-        <a class="footer__link" href="./rooms.html"><svg class="icon icon--sm" aria-hidden="true"><use href="#i-arrow"></use></svg><span data-i18n="nav.rooms">Rooms</span></a>
-        <a class="footer__link" href="./spa.html"><svg class="icon icon--sm" aria-hidden="true"><use href="#i-arrow"></use></svg><span data-i18n="nav.spa">SPA & Wellness</span></a>
-        <a class="footer__link" href="./conference.html"><svg class="icon icon--sm" aria-hidden="true"><use href="#i-arrow"></use></svg><span data-i18n="nav.conf">Конференц-зал</span></a>
-        <a class="footer__link" href="./rules.html"><svg class="icon icon--sm" aria-hidden="true"><use href="#i-arrow"></use></svg><span data-i18n="nav.rules">Правила</span></a>
-        <a class="footer__link" href="./contacts.html"><svg class="icon icon--sm" aria-hidden="true"><use href="#i-arrow"></use></svg><span data-i18n="nav.contacts">Контакты</span></a>
+        <a class="footer__link" href="./index.html"><svg class="icon icon--sm" aria-hidden="true"><use href="./assets/icons/sprite.svg#i-arrow"></use></svg><span data-i18n="nav.hotel">Hotel</span></a>
+        <a class="footer__link" href="./rooms.html"><svg class="icon icon--sm" aria-hidden="true"><use href="./assets/icons/sprite.svg#i-arrow"></use></svg><span data-i18n="nav.rooms">Rooms</span></a>
+        <a class="footer__link" href="./spa.html"><svg class="icon icon--sm" aria-hidden="true"><use href="./assets/icons/sprite.svg#i-arrow"></use></svg><span data-i18n="nav.spa">SPA & Wellness</span></a>
+        <a class="footer__link" href="./conference.html"><svg class="icon icon--sm" aria-hidden="true"><use href="./assets/icons/sprite.svg#i-arrow"></use></svg><span data-i18n="nav.conf">Конференц-зал</span></a>
+        <a class="footer__link" href="./rules.html"><svg class="icon icon--sm" aria-hidden="true"><use href="./assets/icons/sprite.svg#i-arrow"></use></svg><span data-i18n="nav.rules">Правила</span></a>
+        <a class="footer__link" href="./contacts.html"><svg class="icon icon--sm" aria-hidden="true"><use href="./assets/icons/sprite.svg#i-arrow"></use></svg><span data-i18n="nav.contacts">Контакты</span></a>
       </div>
 
       <div class="footer__col">
         <div class="footer__head" data-i18n="footer.cta">CTA</div>
         <a class="footer__link" href="https://wa.me/message/OLSP5EE7YBBVB1" target="_blank" rel="noopener">
-          <svg class="icon icon--sm" aria-hidden="true"><use href="#i-whatsapp"></use></svg>
+          <svg class="icon icon--sm" aria-hidden="true"><use href="./assets/icons/sprite.svg#i-whatsapp"></use></svg>
           <span data-i18n="cta.whatsapp">WhatsApp</span>
         </a>
         <a class="footer__link" href="tel:+77074614707">
-          <svg class="icon icon--sm" aria-hidden="true"><use href="#i-phone"></use></svg>
+          <svg class="icon icon--sm" aria-hidden="true"><use href="./assets/icons/sprite.svg#i-phone"></use></svg>
           <span data-i18n="cta.call">Позвонить</span>
         </a>
         <a class="footer__link" href="mailto:sultanplazaburabay@gmail.com">
-          <svg class="icon icon--sm" aria-hidden="true"><use href="#i-mail"></use></svg>
+          <svg class="icon icon--sm" aria-hidden="true"><use href="./assets/icons/sprite.svg#i-mail"></use></svg>
           <span data-i18n="cta.email">Email</span>
         </a>
         <a class="footer__link" href="https://2gis.kz/kokshetau/geo/70000001047201313/70.259054470807314,52.977457366435075" target="_blank" rel="noopener">
-          <svg class="icon icon--sm" aria-hidden="true"><use href="#i-map"></use></svg>
+          <svg class="icon icon--sm" aria-hidden="true"><use href="./assets/icons/sprite.svg#i-map"></use></svg>
           <span data-i18n="cta.map">2GIS</span>
         </a>
       </div>
@@ -428,7 +426,7 @@
       <div class="footer__col">
         <div class="footer__head" data-i18n="footer.social">Соцсети</div>
         <a class="footer__link" href="https://www.instagram.com/sultan_plaza_borovoe/" target="_blank" rel="noopener">
-          <svg class="icon icon--sm" aria-hidden="true"><use href="#i-instagram"></use></svg>
+          <svg class="icon icon--sm" aria-hidden="true"><use href="./assets/icons/sprite.svg#i-instagram"></use></svg>
           <span>@sultan_plaza_borovoe</span>
         </a>
       </div>
@@ -444,126 +442,25 @@
 <!-- Mobile quick actions -->
 <div class="mobile-actions" aria-label="Quick actions">
   <a class="mobile-actions__btn" href="https://wa.me/message/OLSP5EE7YBBVB1" target="_blank" rel="noopener" aria-label="WhatsApp">
-    <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"></use></svg>
+    <svg class="icon" aria-hidden="true"><use href="./assets/icons/sprite.svg#i-whatsapp"></use></svg>
     <span data-i18n="cta.whatsapp">WhatsApp</span>
   </a>
   <a class="mobile-actions__btn" href="tel:+77074614707" aria-label="Call">
-    <svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg>
+    <svg class="icon" aria-hidden="true"><use href="./assets/icons/sprite.svg#i-phone"></use></svg>
     <span data-i18n="cta.call">Позвонить</span>
   </a>
   <a class="mobile-actions__btn" href="https://2gis.kz/kokshetau/geo/70000001047201313/70.259054470807314,52.977457366435075" target="_blank" rel="noopener" aria-label="2GIS">
-    <svg class="icon" aria-hidden="true"><use href="#i-map"></use></svg>
+    <svg class="icon" aria-hidden="true"><use href="./assets/icons/sprite.svg#i-map"></use></svg>
     <span data-i18n="cta.map">2GIS</span>
   </a>
 </div>
 
-<svg xmlns="http://www.w3.org/2000/svg" style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true">
-  <symbol id="i-menu" viewBox="0 0 24 24">
-    <path d="M5 7h14M5 12h14M5 17h14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-  </symbol>
-  <symbol id="i-close" viewBox="0 0 24 24">
-    <path d="M7 7l10 10M17 7L7 17" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-  </symbol>
-  <symbol id="i-chevron" viewBox="0 0 24 24">
-    <path d="M8 10l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-  </symbol>
-  <symbol id="i-arrow" viewBox="0 0 24 24">
-    <path d="M5 12h12M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-  </symbol>
-
-  <symbol id="i-phone" viewBox="0 0 24 24">
-    <path d="M7 4h2l1 5-2 1c1 3 4 6 7 7l1-2 5 1v2c0 1-1 2-2 2-9 0-16-7-16-16 0-1 1-2 2-2z"
-      fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
-  </symbol>
-  <symbol id="i-mail" viewBox="0 0 24 24">
-    <path d="M4 7h16v10H4z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
-    <path d="M4 7l8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
-  </symbol>
-  <symbol id="i-map" viewBox="0 0 24 24">
-    <path d="M12 21s6-4.2 6-10a6 6 0 10-12 0c0 5.8 6 10 6 10z" fill="none" stroke="currentColor" stroke-width="1.6"/>
-    <path d="M12 11.2a1.2 1.2 0 110-2.4 1.2 1.2 0 010 2.4z" fill="currentColor"/>
-  </symbol>
-  <symbol id="i-instagram" viewBox="0 0 24 24">
-    <path d="M7 4h10a3 3 0 013 3v10a3 3 0 01-3 3H7a3 3 0 01-3-3V7a3 3 0 013-3z" fill="none" stroke="currentColor" stroke-width="1.6"/>
-    <path d="M12 16a4 4 0 100-8 4 4 0 000 8z" fill="none" stroke="currentColor" stroke-width="1.6"/>
-    <path d="M17.5 6.7h.01" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
-  </symbol>
-  <symbol id="i-whatsapp" viewBox="0 0 24 24">
-    <path d="M12 3a9 9 0 00-7.7 13.6L4 21l4.6-1.2A9 9 0 1012 3z"
-      fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
-    <path d="M8.8 9.2c.3 3.2 3.7 6.6 6.9 6.9.5 0 1.2-.3 1.7-.8l.7-.7-1.7-1-.6.5c-.2.2-.6.3-.9.2-1.1-.3-2.6-1.8-2.9-2.9-.1-.3 0-.7.2-.9l.5-.6-1-1.7-.7.7c-.5.5-.8 1.2-.8 1.7z"
-      fill="currentColor" opacity=".9"/>
-  </symbol>
-
-  <symbol id="i-wifi" viewBox="0 0 24 24">
-    <path d="M5 10a11 11 0 0114 0M7.5 13a7.5 7.5 0 019 0M10 16a4 4 0 014 0" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
-    <path d="M12 19.2h.01" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
-  </symbol>
-  <symbol id="i-clock" viewBox="0 0 24 24">
-    <path d="M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M12 21a9 9 0 110-18 9 9 0 010 18z" fill="none" stroke="currentColor" stroke-width="1.6"/>
-  </symbol>
-  <symbol id="i-in" viewBox="0 0 24 24">
-    <path d="M12 3v12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
-    <path d="M8 7l4-4 4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M5 21h14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
-  </symbol>
-  <symbol id="i-out" viewBox="0 0 24 24">
-    <path d="M12 21V9" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
-    <path d="M8 17l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M5 3h14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
-  </symbol>
-
-  <symbol id="i-spa" viewBox="0 0 24 24">
-    <path d="M7 18c2-4 8-4 10 0" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
-    <path d="M9 10c.5 1.8-.5 3.2-2 4M12 9c.8 2 .2 3.6-1 5M15 10c.5 1.8-.5 3.2-2 4" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
-  </symbol>
-  <symbol id="i-kids" viewBox="0 0 24 24">
-    <path d="M8 20v-6l4-2 4 2v6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
-    <path d="M12 9.2a2.2 2.2 0 110-4.4 2.2 2.2 0 010 4.4z" fill="none" stroke="currentColor" stroke-width="1.6"/>
-  </symbol>
-  <symbol id="i-walk" viewBox="0 0 24 24">
-    <path d="M13 5.5a1.6 1.6 0 110-3.2 1.6 1.6 0 010 3.2z" fill="currentColor"/>
-    <path d="M10 21l2-6 3 2 1 4M9 12l3-2 2 1 3 2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M8 14l-2 2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
-  </symbol>
-
-  <!-- Rules / utilities -->
-  <symbol id="i-check" viewBox="0 0 24 24">
-    <path d="M20 6L9 17l-5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-  </symbol>
-  <symbol id="i-ban" viewBox="0 0 24 24">
-    <path d="M12 21a9 9 0 110-18 9 9 0 010 18z" fill="none" stroke="currentColor" stroke-width="1.6"/>
-    <path d="M7.5 7.5l9 9" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
-  </symbol>
-  <symbol id="i-paw" viewBox="0 0 24 24">
-    <path d="M8 12c-1.2 0-2-1-2-2.2C6 8.6 6.8 8 7.8 8c1 0 1.7.8 1.7 1.8S9.1 12 8 12zm8 0c-1.1 0-1.9-1-1.9-2.2S14.8 8 15.8 8c1 0 1.8.6 1.8 1.8 0 1.2-.8 2.2-1.6 2.2z" fill="none" stroke="currentColor" stroke-width="1.2"/>
-    <path d="M10.5 8.5c-1 0-1.7-.9-1.7-2 0-1.1.8-1.8 1.7-1.8 1 0 1.7.8 1.7 1.8 0 1.1-.7 2-1.7 2zM13.5 8.5c-1 0-1.7-.9-1.7-2 0-1.1.8-1.8 1.7-1.8 1 0 1.7.8 1.7 1.8 0 1.1-.7 2-1.7 2z" fill="none" stroke="currentColor" stroke-width="1.2"/>
-    <path d="M12 21c-3.5 0-6-2.1-6-4.3 0-2 2.2-3.2 6-3.2s6 1.2 6 3.2C18 18.9 15.5 21 12 21z" fill="none" stroke="currentColor" stroke-width="1.4"/>
-  </symbol>
-  <symbol id="i-broom" viewBox="0 0 24 24">
-    <path d="M4 20h7" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
-    <path d="M10 18l9-9 2 2-9 9H10z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
-    <path d="M15 7l2 2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
-  </symbol>
-  <symbol id="i-card" viewBox="0 0 24 24">
-    <path d="M4 7h16v10H4z" fill="none" stroke="currentColor" stroke-width="1.6"/>
-    <path d="M4 10h16" fill="none" stroke="currentColor" stroke-width="1.6"/>
-  </symbol>
-  <symbol id="i-repeat" viewBox="0 0 24 24">
-    <path d="M20 12a8 8 0 10-2.3 5.7" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
-    <path d="M20 14v4h-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-  </symbol>
-  <symbol id="i-shirt" viewBox="0 0 24 24">
-    <path d="M8 6l4-2 4 2 3 3-2 2-2-2v11H9V9L7 11 5 9l3-3z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
-  </symbol>
-  <symbol id="i-users" viewBox="0 0 24 24">
-    <path d="M8 12a3 3 0 110-6 3 3 0 010 6zM16 12a3 3 0 110-6 3 3 0 010 6z" fill="none" stroke="currentColor" stroke-width="1.4"/>
-    <path d="M4 20c0-3 2-5 4-5s4 2 4 5M12 20c0-3 2-5 4-5s4 2 4 5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
-  </symbol>
-</svg>
-<script src="./js/main.js"></script>
-<script src="./js/rooms.js"></script>
+<script src="./js/main.js" defer></script>
+<script src="./js/rooms.js" defer></script>
 </div>
 </body>
 </html>
+
+
+
+

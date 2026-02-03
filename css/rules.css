@@ -34,6 +34,13 @@
   margin:0;
   color: rgba(0,0,0,.72);
 }
+@media (max-width: 640px){
+  .rules-grid{ gap: var(--space-4); }
+  .rule-card{ padding: var(--space-4); gap:12px; }
+  .rule-ico{ width:36px; height:36px; }
+  .rule-title{ font-size: 1rem; }
+  .rule-text{ font-size: .95rem; }
+}
 @media (min-width: 768px){
   .rules-grid{ grid-template-columns: repeat(2, 1fr); }
 }

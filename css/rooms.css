@@ -206,6 +206,25 @@
   font-size: 1rem;
 }
 
+@media (max-width: 640px){
+  .pricing-toggle{ padding:12px; align-items:flex-start; }
+  .segmented{ width:100%; justify-content:space-between; }
+  .segmented__btn{ flex:1; text-align:center; padding:10px 10px; }
+
+  .rooms-grid{ gap: var(--space-4); }
+  .room-card__media{ height: 200px; }
+  .room-card__body{ padding: var(--space-4); }
+  .room-card__top{ flex-direction:column; align-items:flex-start; }
+  .badge{ margin-top:8px; }
+  .room-card__specs{ gap:6px; }
+  .spec{ font-size:.85rem; }
+  .checklist{ gap:6px; }
+  .checklist li{ font-size:.92rem; }
+
+  .info-note{ padding: var(--space-4); flex-direction:column; align-items:flex-start; }
+  .info-note .btn{ width:100%; }
+}
+
 /* Responsive */
 @media (min-width: 768px){
   .rooms-grid{ grid-template-columns: repeat(2, 1fr); }

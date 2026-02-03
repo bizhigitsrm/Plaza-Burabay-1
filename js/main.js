@@ -361,7 +361,6 @@
       "meta.checkout": "Check-out 12:00",
       "meta.wifi": "Wi‑Fi free",
       "meta.times": "Check-in 14:00 · Check-out 12:00",
-      "meta.wifiDetail": "Wi‑Fi: open · 5th floor — “Sultan Plaza 5”",
 
       "footer.nav": "Navigation",
       "footer.cta": "CTA",
@@ -514,12 +513,21 @@
     return "ru";
   }
 
-  function applyLang(lang) {
-    document.documentElement.lang = lang;
-    localStorage.setItem("lang", lang);
-
+  function setLangIndicator(lang) {
     const current = qs("[data-lang-current]");
     if (current) current.textContent = (lang === "kk") ? "KZ" : lang.toUpperCase();
+  }
+
+  function applyLang(lang, opts = {}) {
+    const force = Boolean(opts.force);
+    const persist = opts.persist !== false;
+
+    document.documentElement.lang = lang;
+    if (persist) localStorage.setItem("lang", lang);
+    setLangIndicator(lang);
+
+    // Avoid rewriting the DOM for RU on first load to reduce layout work/CLS.
+    if (!force && lang === "ru") return;
 
     qsa("[data-i18n]").forEach((el) => {
       const key = el.getAttribute("data-i18n");
@@ -558,7 +566,7 @@
     langBtns.forEach((b) => {
       b.addEventListener("click", () => {
         const lang = b.getAttribute("data-lang");
-        if (I18N[lang]) applyLang(lang);
+        if (I18N[lang]) applyLang(lang, { force: true, persist: true });
         close();
       });
     });
@@ -643,6 +651,8 @@
   function pageTransitions() {
     // Soft fade-out when navigating between .html pages (keeps the site feeling “alive”).
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    if (navigator.connection && navigator.connection.saveData) return;
+    if (navigator.connection && /(^|\\s)(2g|3g)(\\s|$)/i.test(navigator.connection.effectiveType || "")) return;
 
     qsa("a[href]").forEach((a) => {
       const href = a.getAttribute("href");
@@ -669,6 +679,34 @@
     window.addEventListener("pageshow", () => document.body.classList.remove("is-leaving"));
   }
 
+  function lazyBackgrounds() {
+    const items = qsa("[data-bg]");
+    if (!items.length) return;
+
+    const setBg = (el) => {
+      const src = el.getAttribute("data-bg");
+      if (!src) return;
+      el.style.backgroundImage = `url('${src}')`;
+      el.removeAttribute("data-bg");
+    };
+
+    if (!("IntersectionObserver" in window)) {
+      items.forEach(setBg);
+      return;
+    }
+
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setBg(entry.target);
+          io.unobserve(entry.target);
+        }
+      });
+    }, { rootMargin: "200px 0px", threshold: 0.01 });
+
+    items.forEach((el) => io.observe(el));
+  }
+
   function scrollReveal() {
     const items = qsa("[data-reveal]");
     if (!items.length) return;
@@ -690,17 +728,27 @@
     items.forEach((el) => io.observe(el));
   }
 
+  function runIdle(fn) {
+    if ("requestIdleCallback" in window) {
+      window.requestIdleCallback(fn, { timeout: 1000 });
+    } else {
+      window.setTimeout(fn, 1);
+    }
+  }
+
   document.addEventListener("DOMContentLoaded", () => {
     document.body.classList.add("is-loaded");
     setYear();
     stickyHeader();
     mobileDrawer();
-    setRevealDelays();
     pageTransitions();
-    scrollReveal();
 
     const lang = detectLang();
-    applyLang(lang);
+    applyLang(lang, { persist: lang !== "ru" });
     langUI();
+
+    runIdle(setRevealDelays);
+    runIdle(scrollReveal);
+    runIdle(lazyBackgrounds);
   });
 })();
