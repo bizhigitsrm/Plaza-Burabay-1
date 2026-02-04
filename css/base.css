@@ -631,7 +631,7 @@ strong{ font-weight:600; }
   contain-intrinsic-size: 1px 640px;
   background:
     radial-gradient(900px 500px at 15% 0%, rgba(var(--primary-rgb), .08), transparent 60%),
-    linear-gradient(180deg, rgba(255,255,255,.62), rgba(255,255,255,1));
+    linear-gradient(180deg, rgb(0, 55, 52,.62), rgb(0, 55, 52,1));
 }
 .footer__inner{ display:grid; gap: var(--space-6); }
 .footer__title{ font-weight:600; letter-spacing:.08em; text-transform:uppercase; font-size:.92rem; }
