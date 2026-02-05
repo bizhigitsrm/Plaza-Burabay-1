@@ -20,6 +20,10 @@
 .contact-row:first-child{ border-top:0; padding-top:0; }
 .contact-row__label{ color: rgba(0,0,0,.70); font-size: .95rem; }
 .contact-row__value{ color: rgba(0,0,0,.92); font-weight: 500; }
+.contact-row__value{
+  overflow-wrap:anywhere;
+  word-break:break-word;
+}
 .contact-actions{
   display:flex;
   gap: 10px;

@@ -214,6 +214,20 @@ strong{ font-weight:600; }
   gap:8px;
   padding-bottom:2px;
 }
+.link,
+.contact-row__value,
+.footer__meta,
+.footer__link,
+.fact-val{
+  overflow-wrap:anywhere;
+  word-break:break-word;
+}
+
+.contact-row > div,
+.fact-row > div,
+.room-card__top > div{
+  min-width:0;
+}
 .link::after{
   content:"";
   position:absolute;
@@ -450,6 +464,7 @@ strong{ font-weight:600; }
 .page-hero{
   position:relative;
   min-height: 58vh;
+  min-height: 58svh;
   display:grid;
   align-items:end;
   padding: 0 0 var(--space-7);
@@ -481,7 +496,7 @@ strong{ font-weight:600; }
 }
 
 @media (max-width: 640px){
-  .page-hero{ min-height: 46vh; padding-bottom: var(--space-6); }
+  .page-hero{ min-height: 46vh; min-height: 46svh; padding-bottom: var(--space-6); }
   .page-hero__content{ padding-top: var(--space-7); }
 }
 
@@ -557,6 +572,22 @@ strong{ font-weight:600; }
 }
 
 @media (max-width: 767px){
+  .btn--sm,
+  .lang__btn,
+  .burger,
+  .drawer__close,
+  .nav--mobile .nav__link,
+  .lang__item,
+  .chip--btn{
+    min-height:44px;
+  }
+  .nav--mobile .nav__link{
+    display:flex;
+    align-items:center;
+  }
+}
+
+@media (max-width: 767px){
   body::before{ opacity:.02; }
   .glass,
   .feature-card,
@@ -600,10 +631,11 @@ strong{ font-weight:600; }
   .brand__name{ font-size:.82rem; }
   .brand__sub{ font-size:.7rem; letter-spacing:.18em; }
   .header__actions{ gap:8px; margin-left:auto; }
-  .header__book{ padding:10px 12px; min-height:40px; font-size:.85rem; }
+  .header__book{ padding:10px 12px; min-height:44px; font-size:.85rem; }
 
-  .lang__btn{ height:36px; padding:0 10px; }
-  .burger{ width:40px; height:40px; }
+  .lang__btn{ height:44px; padding:0 10px; }
+  .burger{ width:44px; height:44px; }
+  .drawer__close{ width:44px; height:44px; }
   .drawer__panel{ width:min(92vw, 360px); padding:16px; }
   .nav--mobile{ gap:8px; }
   .nav--mobile .nav__link{ padding:12px 12px; font-size:.95rem; }
@@ -617,7 +649,7 @@ strong{ font-weight:600; }
   .chip{ padding:6px 10px; font-size:.82rem; }
 
   .mobile-actions{ width:min(94vw, 520px); gap:8px; padding:8px; }
-  .mobile-actions__btn{ height:42px; font-size:.92rem; }
+  .mobile-actions__btn{ height:44px; font-size:.92rem; }
 
   .footer__inner{ gap: var(--space-5); }
   .footer__bottom{ flex-direction:column; align-items:flex-start; }
@@ -661,6 +693,10 @@ strong{ font-weight:600; }
   gap:14px;
   color:rgba(0,0,0,.56);
   font-size:.9rem;
+}
+[data-year]{
+  display:inline-block;
+  min-width:4ch;
 }
 
 /* Desktop */
