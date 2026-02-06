@@ -579,6 +579,21 @@
     });
   }
 
+  function removeDrawerLang() {
+    const drawer = qs(".drawer");
+    if (!drawer) return;
+
+    const label = drawer.querySelector("[data-i18n='nav.language']");
+    const row = label ? label.closest(".drawer__row") : null;
+    if (row) {
+      row.remove();
+      return;
+    }
+
+    const langBlock = drawer.querySelector(".drawer__langs");
+    if (langBlock) langBlock.remove();
+  }
+
   function setYear() {
     const yearEl = qs("[data-year]");
     if (yearEl) yearEl.textContent = String(new Date().getFullYear());
@@ -794,6 +809,7 @@
 
     const lang = detectLang();
     applyLang(lang, { persist: lang !== "ru" });
+    removeDrawerLang();
     langUI();
 
     runIdle(setRevealDelays);
