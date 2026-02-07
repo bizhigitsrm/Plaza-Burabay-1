@@ -77,13 +77,18 @@
   background: rgba(255,255,255,.64);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  box-shadow: var(--shadow-soft);
+  box-shadow: none;
   transition: transform .35s var(--ease), box-shadow .35s var(--ease), border-color .35s var(--ease);
 }
 .feature-card:hover{
   transform: translateY(-2px);
   border-color: rgba(var(--primary-rgb), .22);
-  box-shadow: var(--shadow);
+  box-shadow: none;
+}
+.feature-card::before,
+.feature-card::after{
+  box-shadow: none;
+  filter: none;
 }
 
 .feature-card__media{
