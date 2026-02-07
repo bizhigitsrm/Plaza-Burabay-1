@@ -496,6 +496,11 @@ strong{ font-weight:600; }
   -webkit-tap-highlight-color: transparent;
 }
 .lang__item:hover{ background: rgba(var(--primary-rgb), .08); }
+.lang__item.is-active{
+  background: rgba(var(--primary-rgb), .14);
+  color: rgba(0,0,0,.98);
+  font-weight: 600;
+}
 
 /* Sections */
 .section{

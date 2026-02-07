@@ -525,6 +525,11 @@
     document.documentElement.lang = lang;
     if (persist) localStorage.setItem("lang", lang);
     setLangIndicator(lang);
+    qsa("[data-lang]").forEach((btn) => {
+      const isActive = btn.getAttribute("data-lang") === lang;
+      btn.classList.toggle("is-active", isActive);
+      btn.setAttribute("aria-pressed", isActive ? "true" : "false");
+    });
 
     // Avoid rewriting the DOM for RU on first load to reduce layout work/CLS.
     if (!force && lang === "ru") return;
