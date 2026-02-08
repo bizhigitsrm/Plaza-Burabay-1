@@ -16,6 +16,7 @@
       "nav.contacts": "Контакты",
       "nav.menu": "Меню",
       "nav.language": "Язык",
+      "a11y.skip": "Пропустить к содержимому",
 
       "cta.whatsapp": "WhatsApp",
       "cta.call": "Позвонить",
@@ -180,6 +181,7 @@
       "nav.contacts": "Байланыс",
       "nav.menu": "Мәзір",
       "nav.language": "Тіл",
+      "a11y.skip": "Мазмұнға өту",
 
       "cta.whatsapp": "WhatsApp",
       "cta.call": "Қоңырау",
@@ -344,6 +346,7 @@
       "nav.contacts": "Contacts",
       "nav.menu": "Menu",
       "nav.language": "Language",
+      "a11y.skip": "Skip to content",
 
       "cta.whatsapp": "WhatsApp",
       "cta.call": "Call",
@@ -361,6 +364,7 @@
       "meta.checkout": "Check-out 12:00",
       "meta.wifi": "Wi‑Fi free",
       "meta.times": "Check-in 14:00 · Check-out 12:00",
+      "meta.wifiDetail": "Wi‑Fi: open · 5th floor — \"Sultan Plaza 5\"",
 
       "footer.nav": "Navigation",
       "footer.cta": "CTA",
