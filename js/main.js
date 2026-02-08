@@ -531,9 +531,6 @@
       btn.setAttribute("aria-pressed", isActive ? "true" : "false");
     });
 
-    // Avoid rewriting the DOM for RU on first load to reduce layout work/CLS.
-    if (!force && lang === "ru") return;
-
     qsa("[data-i18n]").forEach((el) => {
       const key = el.getAttribute("data-i18n");
       el.textContent = t(lang, key);

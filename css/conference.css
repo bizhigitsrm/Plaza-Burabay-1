@@ -1,7 +1,7 @@
 /* conference.css — Conference page only */
 .page-hero--conf .page-hero__media{
-  /* Replace with real photo: /assets/conference/hall.jpg */
-  background-image:url("../assets/conference/hall.jpg");
+  /* Replace with real photo: /assets/conference/hall.avif */
+  background-image:url("../assets/conference/hall.avif");
 }
 
 .facts{
